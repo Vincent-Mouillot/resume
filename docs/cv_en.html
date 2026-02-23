@@ -261,9 +261,36 @@ a:hover { text-decoration: underline; }
     size   : A4;
     margin : 12mm 15mm 12mm 12mm;
   }
+}
+
+/* ============================================================
+   DOWNLOAD BUTTON
+   ============================================================ */
+
+.btn-download {
+  position        : fixed;
+  bottom          : 1.5rem;
+  right           : 1.5rem;
+  background      : #2980b9;
+  color           : white;
+  padding         : 0.6rem 1.2rem;
+  border-radius   : 4px;
+  font-size       : 8.5pt;
+  font-weight     : 600;
+  text-decoration : none;
+  box-shadow      : 0 2px 8px rgba(0,0,0,0.2);
+  z-index         : 999;
+}
+
+.btn-download:hover { background: #1f6391; color: white; }
+
+/* Hide the button when printing */
+@media print {
+  .btn-download { display: none; }
 }</style>
 </head>
 <body>
+<a class="btn-download" href="cv_en.pdf" download>⬇ Télécharger le PDF</a>
 <div class="cv-header">
   <div class="cv-header-left">
     <h1>Vincent MOUILLOT</h1>

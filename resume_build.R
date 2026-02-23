@@ -226,6 +226,26 @@ build_html <- function(lang) {
 {projects}
 </body>
 </html>')
+  
+  pdf_filename <- paste0("cv_", lang, ".pdf")
+  
+  glue('<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{cv$meta$name}</title>
+  <style>{css_content}</style>
+</head>
+<body>
+<a class="btn-download" href="{pdf_filename}" download>⬇ Télécharger le PDF</a>
+{header}
+{skills}
+{experience}
+{education}
+{projects}
+</body>
+</html>')
 }
 
 # ---- Generate FR and EN versions ---------------------------
