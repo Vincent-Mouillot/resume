@@ -1,0 +1,258 @@
+/* ============================================================
+   custom.css — CV : header pleine largeur + 1 colonne
+   ============================================================ */
+
+:root {
+  --primary  : #2c3e50;
+  --accent   : #2980b9;
+  --muted    : #6c7a89;
+  --border   : #dde3e9;
+  --bg-light : #f4f6f8;
+}
+
+/* --- Reset global --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family : "Helvetica Neue", Arial, sans-serif;
+  font-size   : 10pt;
+  color       : var(--primary);
+  line-height : 1.5;
+  background  : white;
+  /* Simule une page A4 centrée */
+  max-width   : 210mm;
+  margin      : 0 auto;
+  padding     : 12mm;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.cv-header {
+  display          : flex;
+  justify-content  : space-between;
+  align-items      : flex-start;
+  gap              : 1.5rem;
+  background       : var(--primary);
+  color            : white;
+  padding          : 1.2rem 1.4rem;
+  border-radius    : 6px;
+  margin-bottom    : 1.2rem;
+  width            : 100%;
+}
+
+.cv-header a { color: #a8d4f5; }
+.cv-header a:hover { color: white; }
+
+.cv-header-left {
+  flex     : 1;
+  min-width: 0;   /* empêche le débordement flex */
+}
+
+.cv-header h1 {
+  font-size   : 22pt;
+  font-weight : 700;
+  color       : white;
+  line-height : 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.cv-job-title {
+  font-size    : 11pt;
+  font-weight  : 300;
+  color        : #a8d4f5;
+  margin-bottom: 0.6rem;
+}
+
+.cv-summary {
+  font-size   : 8.5pt;
+  color       : #cdd9e5;
+  line-height : 1.5;
+}
+
+.cv-header-right {
+  display        : flex;
+  flex-direction : column;
+  align-items    : flex-end;
+  gap            : 0.6rem;
+  flex-shrink    : 0;
+}
+
+.cv-photo {
+  width         : 100px;
+  height        : 100px;
+  border-radius : 50%;
+  object-fit    : cover;
+  border        : 2px solid rgba(255,255,255,0.4);
+}
+
+.cv-contact {
+  list-style : none;
+  text-align : right;
+}
+
+.cv-contact li {
+  font-size     : 8pt;
+  color         : #cdd9e5;
+  margin-bottom : 0.25rem;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+.cv-section {
+  margin-bottom: 1rem;
+}
+
+.cv-section-title {
+  font-size      : 8.5pt;
+  font-weight    : 700;
+  text-transform : uppercase;
+  letter-spacing : 0.1em;
+  color          : var(--accent);
+  border-bottom  : 1.5px solid var(--accent);
+  padding-bottom : 0.2rem;
+  margin-bottom  : 0.6rem;
+}
+
+/* ============================================================
+   ENTRÉES
+   ============================================================ */
+
+.cv-entry {
+  margin-bottom : 0.7rem;
+  padding-left  : 0.7rem;
+  border-left   : 2px solid var(--border);
+}
+
+.cv-entry-header {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : baseline;
+  gap             : 1rem;
+}
+
+.cv-entry-left { flex: 1; min-width: 0; }
+
+.cv-entry-title {
+  font-weight : 700;
+  font-size   : 9.5pt;
+  display     : block;
+}
+
+.cv-entry-org {
+  font-size : 8.5pt;
+  color     : var(--muted);
+  display   : block;
+}
+
+.cv-entry-period {
+  font-size   : 8pt;
+  color       : var(--muted);
+  white-space : nowrap;
+  flex-shrink : 0;
+}
+
+.cv-entry-body {
+  margin-top : 0.3rem;
+  font-size  : 8.5pt;
+}
+
+.cv-entry-body ul {
+  padding-left  : 1rem;
+  margin        : 0;
+}
+
+.cv-entry-body ul ul,
+.cv-entry-body li.sub-item {
+  margin-left : 1rem;
+  color       : var(--muted);
+}
+
+.cv-entry-body li { margin-bottom: 0.1rem; }
+
+.cv-entry-body p { margin: 0; }
+
+.cv-note {
+  font-size  : 8.5pt;
+  font-style : italic;
+  color      : var(--muted);
+  margin-top : 0.2rem;
+}
+
+/* ============================================================
+   COMPÉTENCES
+   ============================================================ */
+
+.cv-skills-grid {
+  display               : grid;
+  grid-template-columns : repeat(2, 1fr);
+  gap                   : 0.3rem 2rem;
+}
+
+.skill-group { font-size: 8.5pt; }
+
+.skill-cat {
+  font-weight : 700;
+  color       : var(--primary);
+}
+
+/* ============================================================
+   PROJETS
+   ============================================================ */
+
+.cv-project-url {
+  font-size : 8pt;
+  color     : var(--muted);
+  display   : block;
+}
+
+.cv-tags {
+  font-size  : 7.5pt;
+  color      : var(--accent);
+  margin-top : 0.2rem;
+}
+
+/* ============================================================
+   CERTIFICATIONS
+   ============================================================ */
+
+.cv-certs-grid {
+  display               : grid;
+  grid-template-columns : repeat(2, 1fr);
+  gap                   : 0.35rem 2rem;
+}
+
+.cv-cert { font-size: 8.5pt; }
+
+.cv-cert-name {
+  font-weight : 600;
+  display     : block;
+}
+
+.cv-cert-meta {
+  color   : var(--muted);
+  display : block;
+}
+
+/* ============================================================
+   IMPRESSION / PDF (via chrome_print)
+   ============================================================ */
+
+@media print {
+  body {
+    max-width : 100%;
+    padding   : 0;
+    margin    : 0;
+  }
+
+  @page {
+    size   : A4;
+    margin : 12mm;
+  }
+}
