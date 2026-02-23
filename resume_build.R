@@ -11,7 +11,7 @@ library(base64enc)
 
 # ---- Config ------------------------------------------------
 YAML_FILE  <- "resume_data.yaml"
-OUTPUT_DIR <- "output"
+OUTPUT_DIR <- "docs"
 PHOTO_FILE <- "photo.jpg"   # set to NULL if no photo: PHOTO_FILE <- NULL
 
 dir.create(OUTPUT_DIR, showWarnings = FALSE)
