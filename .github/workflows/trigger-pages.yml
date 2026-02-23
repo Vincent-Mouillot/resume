@@ -6,6 +6,8 @@ on:
     paths:
       - 'docs/cv_fr.html'
       - 'docs/cv_en.html'
+      - 'docs/cv_fr.pdf'
+      - 'docs/cv_en.pdf'
 
 jobs:
   trigger:
