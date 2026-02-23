@@ -268,9 +268,9 @@ a:hover { text-decoration: underline; }
    ============================================================ */
 
 .btn-download {
-  position        : fixed;
-  bottom          : 1.5rem;
-  right           : 1.5rem;
+  display         : block;
+  width           : fit-content;
+  margin          : 0 0 1rem auto;
   background      : #2980b9;
   color           : white;
   padding         : 0.6rem 1.2rem;
@@ -279,18 +279,16 @@ a:hover { text-decoration: underline; }
   font-weight     : 600;
   text-decoration : none;
   box-shadow      : 0 2px 8px rgba(0,0,0,0.2);
-  z-index         : 999;
 }
 
 .btn-download:hover { background: #1f6391; color: white; }
 
-/* Hide the button when printing */
 @media print {
   .btn-download { display: none; }
 }</style>
 </head>
 <body>
-<a class="btn-download" href="cv_fr.pdf" download>⬇ Télécharger le PDF</a>
+<a class="btn-download" href="cv_fr.pdf" download>&#11015; Télécharger le PDF</a>
 <div class="cv-header">
   <div class="cv-header-left">
     <h1>Vincent MOUILLOT</h1>

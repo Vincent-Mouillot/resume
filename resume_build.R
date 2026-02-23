@@ -229,6 +229,8 @@ build_html <- function(lang) {
   
   pdf_filename <- paste0("cv_", lang, ".pdf")
   
+  download_label <- if (lang == "fr") "&#11015; Télécharger le PDF" else "&#11015; Download PDF"
+  
   glue('<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -238,7 +240,7 @@ build_html <- function(lang) {
   <style>{css_content}</style>
 </head>
 <body>
-<a class="btn-download" href="{pdf_filename}" download>⬇ Télécharger le PDF</a>
+<a class="btn-download" href="{pdf_filename}" download>{download_label}</a>
 {header}
 {skills}
 {experience}
