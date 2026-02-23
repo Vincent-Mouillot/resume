@@ -26,7 +26,7 @@ cv <- yaml::read_yaml(YAML_FILE)
 # Otherwise return the field as-is
 t <- function(field, lang) {
   if (is.null(field)) return("")
-  if (is.list(field) && !is.null(field[[lang]])) return(field[[lang]])
+  if (is.list(field) && !is.null(field[[lang]])) return(as.character(field[[lang]]))
   if (is.character(field)) return(paste(field, collapse = " "))
   return("")
 }
@@ -124,9 +124,8 @@ build_html <- function(lang) {
       <li><a href="mailto:{cv$meta$email}">{cv$meta$email}</a></li>
       <li>{cv$meta$phone}</li>
       <li>{cv$meta$location}</li>
-      <li><a href="https://{cv$meta$linkedin}">{cv$meta$linkedin}</a></li>
+      <li><a href="https://{paste0(tl(cv$meta$linkedin))}">{cv$meta$linkedin_display}</a></li>
       <li><a href="https://{cv$meta$website}">{cv$meta$website}</a></li>
-      <li><a href="https://{cv$meta$github}">{cv$meta$github}</a></li>
     </ul>
   </div>
 </div>')

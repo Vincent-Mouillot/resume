@@ -9,7 +9,10 @@ meta:
   phone: "+33 6 76 14 87 03"
   website: "vincent-mouillot.github.io"
   github: "github.com/Vincent-Mouillot"
-  linkedin: "linkedin.com/in/vincent-mouillot"
+  linkedin:
+    fr: "linkedin.com/in/vincent-mouillot/?locale=fr_FR"
+    en: "linkedin.com/in/vincent-mouillot/?locale=en_US"
+  linkedin_display: "linkedin.com/in/vincent-mouillot"
   location: "Lyon, France"
   summary:
     fr: |
@@ -40,7 +43,7 @@ experience:
           - Association leads entrants avec compte du CRM
           - Développement et automatisation (via Databricks) d'un Système de Recommandation 
             "Two Towers" Cross-Sell/Upsell via un modèle de Deep Learning 
-          - Analyses complexes avec mise à disposition des résultats via Dashboard 
+        - Analyses complexes avec mise à disposition des résultats via Dashboard 
             sur Databricks et R Shiny
       en: |
         - Development and automation (via Databricks) of machine models Learning
@@ -49,7 +52,7 @@ experience:
           - Incoming leads association with CRM account
           - Development and automation (via Databricks) of a System of Recommendation 
             "Two Towers" Cross-Sell/Upsell via a Deep model Learning 
-          - Complex analyses with provision of results via Dashboard on Databricks 
+        - Complex analyses with provision of results via Dashboard on Databricks 
             and R Shiny
 
   - title:
@@ -109,7 +112,7 @@ projects:
   - title: "Prono PL"
     url: "https://github.com/Vincent-Mouillot/Prono_PL"
     start: 2024
-    end: ~
+    end: 2026
     description:
       fr: |
         Récupération de données et création d'un modèle de Machine Learning pour 
@@ -123,13 +126,11 @@ projects:
 
   - title: "Algorave FoxDot"
     url: "https://github.com/Vincent-Mouillot/algorave-foxdot"
-    start: 2021
-    end: 2022
+    start: 2025
+    end: ~
     description:
-      fr: |
-        Découverte de l'algorave (création de musique avec du code)
-      en: |
-        Discovery of the algorave (creation of music with code)
+      fr: "Découverte de l'algorave (création de musique avec du code)"
+      en: "Discovery of the algorave (creation of music with code)"
     tags: ["Python", "FoxDot"]
 
 # ============================================================

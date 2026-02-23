@@ -191,8 +191,8 @@ a:hover { text-decoration: underline; }
 
 .cv-skills-grid {
   display               : grid;
-  grid-template-columns : repeat(2, 1fr);
-  gap                   : 0.3rem 2rem;
+  grid-template-columns : 1fr;
+  gap                   : 0.3rem;
 }
 
 .skill-group { font-size: 8.5pt; }
@@ -224,8 +224,8 @@ a:hover { text-decoration: underline; }
 
 .cv-certs-grid {
   display               : grid;
-  grid-template-columns : repeat(2, 1fr);
-  gap                   : 0.35rem 2rem;
+  grid-template-columns : 1fr;
+  gap                   : 0.3rem;
 }
 
 .cv-cert { font-size: 8.5pt; }
