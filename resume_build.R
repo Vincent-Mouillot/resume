@@ -125,6 +125,7 @@ build_html <- function(lang) {
       <li>{cv$meta$phone}</li>
       <li>{cv$meta$location}</li>
       <li><a href="https://{cv$meta$linkedin}">{cv$meta$linkedin}</a></li>
+      <li><a href="https://{cv$meta$website}">{cv$meta$website}</a></li>
       <li><a href="https://{cv$meta$github}">{cv$meta$github}</a></li>
     </ul>
   </div>
