@@ -253,6 +253,6 @@ a:hover { text-decoration: underline; }
 
   @page {
     size   : A4;
-    margin : 12mm;
+    margin : 12mm 15mm 12mm 12mm;
   }
 }
